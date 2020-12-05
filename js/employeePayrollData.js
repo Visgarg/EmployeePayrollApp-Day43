@@ -14,11 +14,7 @@ class EmployeePayrollData
         else throw 'Name is Incorrect!';
     }
     //geter and setter for id
-    get id(){ return this._id;}
-    set id(id)
-    {
-        this._id=id;
-    }
+    id;
     //getter and setter fr profilepic
     get profilePic() { return this._profilePic; }
     set profilePic(profilePic) 
