@@ -108,7 +108,7 @@ const createEmployeePayrollJSON = () => {
       if(!empPayrollData) return;
       //for finding out index, emppayroll list is converted to array only of id by mapping and then
       //emppayrolldata id is compared to get index
-      const index= empPayrollList.map(empData=>empData.id).findIndex(empPayrollData.id);
+      const index= empPayrollList.map(empData=>empData.id).indexOf(empPayrollData.id);
       //using splice to remove element from array
       empPayrollList.splice(index,1);
       //updating the data into local storage

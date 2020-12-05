@@ -96,8 +96,6 @@ const save=(event)=>{
     {
         return;
     }
-    //refactoring the code to populate employee payroll oject defined globally and filling values in employee payroll object instead of
-    //creating the object of employee payroll seperately in create employee payroll 
   
 }
 //setting employee payroll objects with data entered in payroll form
@@ -106,8 +104,9 @@ const setEmployeePayrollObject = () => {
         employeePayrollObj.id= createNewEmployeeId();
     }
     try{
-    checkName(employeePayrollObj._name)
     employeePayrollObj._name = getInputValueById('#name');
+    checkName(employeePayrollObj._name);
+    setTextValue(".name-error","");
     }
     catch(e){
         setTextValue(".name-error",e)
